@@ -8,5 +8,5 @@ skynet.start(function ()
 		db		= 0,
 		-- auth	= "123456",
 	})
-
+ 
 end)
