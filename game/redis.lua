@@ -8,5 +8,9 @@ skynet.start(function ()
 		db		= 0,
 		-- auth	= "123456",
 	})
+
+	skynet.dispatch("lua", function (session, address, cmd, ...)
+		skynet.retpack( rds[cmd:lower()](rds, ...))
+	end)
  
 end)
