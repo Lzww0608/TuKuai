@@ -1,3 +1,20 @@
+--[[
+room.lua 文件流程说明:
+
+1. 服务初始化
+   - 加载必要的模块(skynet, socket)
+   - 定义CMD表存储room命令处理函数
+   - 初始化roles表用于存储玩家信息
+   - 初始化redisd用于连接redis服务
+   - 初始化game表用于存储游戏状态
+
+2. 命令处理
+   - start: 处理游戏开始
+   - offline: 处理玩家掉线
+   - online: 处理玩家上线
+   - guess: 处理玩家猜数字
+]]
+
 local skynet = require "skynet"
 local socket = require "skynet.socket"
 

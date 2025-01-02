@@ -1,3 +1,20 @@
+--[[
+hall.lua 文件流程说明:
+
+1. 服务初始化
+   - 加载必要的模块(skynet, queue, socket)
+   - 定义CMD表存储hall命令处理函数
+   - 初始化queues和resps表用于存储玩家信息
+
+2. 命令处理
+   - ready: 处理玩家准备加入游戏
+   - offline: 处理玩家退出游戏
+
+3. 主要功能命令(CMD表)
+   - ready: 处理玩家准备加入游戏
+   - offline: 处理玩家退出游戏
+]]
+
 local skynet = require "skynet"
 local queue = require "skynet.queue"
 local socket = require "skynet.socket"
